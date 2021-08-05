@@ -15,4 +15,4 @@
   
 ## Running the app
 
-- `yarn start`: starts a Metro Bundler
+- `yarn start` : starts a Metro Bundler
