@@ -3,10 +3,10 @@
 - Clone this repo
 
 	```bash
-	git clone git@github.com:bramus/react-native-maps-directions-example.git
+	git clone https://github.com/AntDavi/entregaApp.git
 	```
   
-  - Install dependencies
+- Install dependencies
 
 	```bash
 	yarn install
