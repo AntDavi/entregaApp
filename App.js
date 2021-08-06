@@ -5,7 +5,7 @@ import { View, StatusBar } from 'react-native';
 // Estilizações e configurações
 import { styles } from './src/styles'
 import { mapStyle } from './src/config/mapStyle.json'
-import config from './src/config'
+import { googleApi } from './src/config/index.json'
 
 // Bibliotecas
 import MapView from 'react-native-maps';
@@ -16,10 +16,9 @@ import MapViewDirections from 'react-native-maps-directions';
 export default function App() {
 
   // Definição de estados da origem e do destino
-  const [ origin, setOrigin ] = useState (null);
-  const [ destination,setDestination ] = useState (null);
-  const mapEl = useRef (null);
-  const [ distance, setDistance ] = useState (null);
+  const [origin, setOrigin] = useState(null);
+  const [destination, setDestination] = useState(null);
+  const mapEl = useRef(null);
 
   // Permisssão para pegar a localização do úsuario
   useEffect(() => {
@@ -50,28 +49,29 @@ export default function App() {
         initialRegion={origin}
         showsUserLocation={true}
         loadingEnabled={true}
-        zoomEnabled={false}
+        // zoomEnabled={false}
         ref={mapEl}
       >
         {/* Visualização da rota no mapa */}
         {destination &&
           <MapViewDirections
+            lineDashPattern={[0]}
             origin={origin}
             destination={destination}
-            apikey={config.googleApi}
-            strokeWidth={3}
+            apikey={googleApi}
+            strokeWidth={5}
+            strokeColor="hotpink"
             onReady={result => {
-              // mapEl.current.fitToCordinates(
-              //   result.coordinates, {
-              //     edgePadding: {
-              //       top:50,
-              //       bottom:50,
-              //       left:50,
-              //       right:50
-              //     }
-              //   }
-              // )
-              console.log(result)
+              mapEl.current.fitToCoordinates(
+                result.fitToCoordinates, {
+                  edgePadding: {
+                    top: 50,
+                    bottom: 50,
+                    left: 50,
+                    right: 50
+                  }
+                }
+              )
             }}
           />
         }
@@ -84,13 +84,13 @@ export default function App() {
           onPress={(data, details = null) => {
             setDestination({
                 latitude: details.geometry.location.lat,
-                longitude: details.geometry.location.lon,
+                longitude: details.geometry.location.lng,
                 latitudeDelta: 0.00922,
                 longitudeDelta: 0.00421,
             });
           }}
           query={{
-            key: config.googleApi,
+            key: googleApi,
             language: 'pt-br',
           }}
           enablePoweredByContainer={false}
