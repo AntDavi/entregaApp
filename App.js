@@ -8,19 +8,19 @@ import { mapStyle } from './src/config/mapStyle.json'
 import { googleApi } from './src/config/index.json'
 
 // Bibliotecas
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import MapViewDirections from 'react-native-maps-directions';
 
 export default function App() {
 
-  // Definição de estados da origem e do destino
+  // Definição de estados da origem, do destino e da referencia de map
   const [origin, setOrigin] = useState(null);
   const [destination, setDestination] = useState(null);
   const mapEl = useRef(null);
 
-  // Permisssão para pegar a localização do úsuario
+  // Permisssão para pegar a localização do úsuario e utilizando como origem
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -37,7 +37,7 @@ export default function App() {
       })
     })();
   }, []);
-
+  
   return (
     <View style={styles.container}>
       <StatusBar/>
@@ -48,10 +48,11 @@ export default function App() {
         customMapStyle={mapStyle}
         initialRegion={origin}
         showsUserLocation={true}
+        followsUserLocation={true}
         loadingEnabled={true}
-        // zoomEnabled={false}
         ref={mapEl}
       >
+        
         {/* Visualização da rota no mapa */}
         {destination &&
           <MapViewDirections
@@ -59,8 +60,8 @@ export default function App() {
             origin={origin}
             destination={destination}
             apikey={googleApi}
-            strokeWidth={5}
-            strokeColor="hotpink"
+            strokeWidth={3}
+            strokeColor="#42A5F5"
             onReady={result => {
               mapEl.current.fitToCoordinates(
                 result.fitToCoordinates, {
@@ -71,10 +72,34 @@ export default function App() {
                     right: 50
                   }
                 }
-              )
-            }}
+                )
+              }
+            }
+          />
+
+        }
+
+        {/* Vizualização da marca de destino */}
+        {destination &&
+          <Marker 
+            title={"Seu destino"} 
+            coordinate={destination}
+            description={"É uma loja muito legal"}
+            draggable
+            onDragEnd={
+              (e) => {
+              // console.log(e.nativeEvent.coordinate);
+              setDestination({
+                latitude: e.nativeEvent.coordinate.latitude,
+                longitude: e.nativeEvent.coordinate.longitude,
+                latitudeDelta: 0.00922,
+                longitudeDelta: 0.00421,
+              })
+              }
+            }
           />
         }
+        
       </MapView>
 
       {/* Visualização da barra de pesquisa */}
