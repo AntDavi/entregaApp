@@ -51,6 +51,17 @@ export default function App() {
         followsUserLocation={true}
         loadingEnabled={true}
         ref={mapEl}
+        onLongPress = {
+          (e) => {
+            // console.log(e.nativeEvent.coordinate);
+            setDestination({
+              latitude: e.nativeEvent.coordinate.latitude,
+              longitude: e.nativeEvent.coordinate.longitude,
+              latitudeDelta: 0.00922,
+              longitudeDelta: 0.00421,
+            })
+          }
+        }
       >
         
         {/* Visualização da rota no mapa */}
