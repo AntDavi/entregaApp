@@ -18,7 +18,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
    <a href="https://github.com/AntDavi/it-s-yout-Route/stargazers">
-	<img alt="Stargazers" src="https://img.shields.io/github/stars/tgmarinho/nlw1?style=social">
+	<img alt="Stargazers" src="https://img.shields.io/github/stars/AntDavi/it-s-yout-Route?style=social">
    </a>
 
 </p>
