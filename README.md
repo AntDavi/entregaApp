@@ -1,18 +1,65 @@
-# entregaApp
+<h1 align="center">
+    <img alt="It's Your Route" title="It's Your Route" src="./assets/Banner.png" />
+</h1>
 
-- Clone this repo
+<h4 align="center"> 
+	🚧 it's your Routes 🗺 em construção... 🚧
+</h4>
 
-	```bash
-	git clone https://github.com/AntDavi/entregaApp.git
-	```
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/tgmarinho/nlw1?color=%2304D361">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/tgmarinho/nlw1">
   
-- Install dependencies
+  <a href="https://github.com/tgmarinho/nlw1/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tgmarinho/nlw1">
+  </a>
 
-	```bash
-	yarn install
-	```
-  
-  
-## Running the app
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
-- `yarn start` : starts a Metro Bundler
+   <a href="https://github.com/AntDavi/it-s-yout-Route/stargazers">
+	<img alt="Stargazers" src="https://img.shields.io/github/stars/tgmarinho/nlw1?style=social">
+   </a>
+
+</p>
+
+## 💻 Sobre o projeto
+
+🗺 it's your Routes - é uma forma simples de criar uma rota entre dois pontos em um mapa.
+
+O úsuario terá em suas mãos a melhor rota a se seguir em um mapa.
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [React Native][rn]
+
+## 🚀 Como executar o projeto
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js][nodejs]. 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/AntDavi/it-s-yout-Route
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ expo start
+
+## 📝 Licença
+
+Este projeto esta sobe a licença MIT.
+
+Feito com ❤️ por Anthony Davi 👋🏽 [Entre em contato!](https://www.linkedin.com/in/antdavi/)
+
+[nodejs]: https://nodejs.org/
+[expo]: https://expo.io/
+[rn]: https://facebook.github.io/react-native/
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[license]: https://opensource.org/licenses/MIT

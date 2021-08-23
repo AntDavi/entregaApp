@@ -92,7 +92,8 @@ export default function App() {
         {/* Vizualização da marca de destino */}
         {destination &&
           <Marker 
-            title={"Seu destino"} 
+            title={"Seu destino"}
+            description={"Está é sua rota!"}
             coordinate={destination}
             draggable
             onDragEnd={
