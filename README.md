@@ -29,17 +29,7 @@
 
 O úsuario terá em suas mãos a melhor rota a se seguir em um mapa.
 
-## 🛠 Tecnologias
-
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- [React Native][rn]
-
 ## 🚀 Como executar o projeto
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js][nodejs]. 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
 
 ```bash
 # Clone este repositório
@@ -50,6 +40,7 @@ $ npm install
 
 # Execute a aplicação
 $ expo start
+```
 
 ## 📝 Licença
 
