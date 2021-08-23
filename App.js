@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 import { View, StatusBar } from 'react-native';
 
 // Estilizações e configurações
@@ -25,7 +24,7 @@ export default function App() {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        setErrorMsg('Permission to access location was denied');
+        setErrorMsg('Você precisa permitir o acesso a localização!');
         return;
       }
       let location = await Location.getCurrentPositionAsync({});
@@ -95,7 +94,6 @@ export default function App() {
           <Marker 
             title={"Seu destino"} 
             coordinate={destination}
-            description={"É uma loja muito legal"}
             draggable
             onDragEnd={
               (e) => {
@@ -110,6 +108,7 @@ export default function App() {
             }
           />
         }
+
         
       </MapView>
 
@@ -131,9 +130,15 @@ export default function App() {
           }}
           enablePoweredByContainer={false}
           fetchDetails={true}
-          styles={
-            {listView: {height: 100}}
-          }
+          styles={{
+            textInput: {
+              height: 38,
+              color: '#5d5d5d',
+              fontSize: 16,
+              marginTop: 16,
+              marginHorizontal: 16,
+            },
+          }}
         />
       </View>
 
