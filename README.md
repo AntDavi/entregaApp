@@ -7,18 +7,18 @@
 </h4>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AntDavi/it-s-yout-Route?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AntDavi/it-s-your-Route?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/AntDavi/it-s-yout-Route">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/AntDavi/it-s-your-Route">
   
-  <a href="https://github.com/tgmarinho/nlw1/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AntDavi/it-s-yout-Route">
+  <a href="https://github.com/AntDavi/it-s-your-Route/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AntDavi/it-s-your-Route">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
    <a href="https://github.com/AntDavi/it-s-yout-Route/stargazers">
-	<img alt="Stargazers" src="https://img.shields.io/github/stars/AntDavi/it-s-yout-Route?style=social">
+	<img alt="Stargazers" src="https://img.shields.io/github/stars/AntDavi/it-s-your-Route?style=social">
    </a>
 
 </p>
@@ -33,7 +33,7 @@ O úsuario terá em suas mãos a melhor rota a se seguir em um mapa.
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/AntDavi/it-s-yout-Route
+$ git clone https://github.com/AntDavi/it-s-your-Route
 
 # Instale as dependências
 $ npm install
